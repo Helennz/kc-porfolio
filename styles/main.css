@@ -1,0 +1,284 @@
+
+body {
+    
+  margin: 0;
+    font-family: monospace, sans-serif;
+    background-color: #ffeaea;
+    word-spacing: 10px; 
+    text-align: justify;
+    line-height: 25px;
+  }
+
+.main-pic{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  padding-top: 20px;}
+ 
+.fox-icon{
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 50px;
+  height: 50px;
+}
+.main {
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+}
+.about{
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align:justify;  
+  font-weight: normal;
+  line-height: 25pt;
+}
+
+
+
+/*.skills{
+  display:flex;
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  text-align:justify;  
+  align-content: center;
+  justify-content: space-between;
+ 
+}*/
+
+.skill-head{
+  align-content: flex-start;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.progress-chart{
+  display: flex;
+  justify-content: center;
+}
+
+
+.section3{
+  font-weight: bold;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+
+}  
+
+.form {
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    text-align: justify;  
+    font-weight: normal;
+    line-height: 25pt;
+}
+
+footer{
+  background: #ffc3c3;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  color: white;
+  font-weight: bold;
+  width:100%;
+  justify-content: center;
+}
+
+.copyright {
+  padding-right: 40px;
+}
+
+  /* header */
+    .header {
+    background-color: #ffc3c3;
+    box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+  }
+  
+  
+  .header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #ffd8d8;
+  }
+  
+  .header li a {
+    display: block;
+    padding: 20px 20px;
+    border-right: 1px solid #f4f4f4;
+    text-decoration: none;
+  }
+  
+  .header li a:hover,
+  .header .menu-btn:hover {
+    background-color: #ffeaea;
+  }
+  
+  .header .logo {
+    display: flex;
+    float: left;
+    font-size: 25px;
+    padding: 10px 20px;
+    text-decoration: none;
+      }
+  
+  /* menu */
+    .header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+    
+  /* menu icon */
+    .header .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+    .header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+    .header .menu-icon .navicon:before,
+  .header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+    .header .menu-icon .navicon:before {
+    top: 5px;
+  }
+  
+  .header .menu-icon .navicon:after {
+    top: -5px;
+  }
+  
+  /* menu btn */
+    .header .menu-btn {
+    display: none;
+  }
+    .header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+  }
+    .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+    .header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+  }
+    .header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+  }
+    .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+  .header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+  }
+ 
+ 
+/*CIRCLE PROGRESS BAR*/
+.single-chart {
+  width: 175px;
+} 
+
+.circular-chart {
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  animation: progress 5s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+      stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart.red .circle {
+  stroke: rgb(196, 58, 58);
+}
+
+.circular-chart.green .circle {
+  stroke: rgb(65, 213, 107);
+}
+
+.circular-chart.blue .circle {
+  stroke: rgb(76, 189, 246);
+}
+
+.circular-chart.purple .circle {
+  stroke: rgb(167, 76, 246);
+}
+
+.circular-chart.orange .circle {
+  stroke: rgb(246, 178, 76);
+}
+
+.circular-chart.pink .circle {
+  stroke: rgb(244, 128, 240);
+}
+
+.skill-name {
+  fill: rgb(7, 7, 7);
+  font-family: sans-serif;
+  font-size: 0.2em;
+  text-anchor: middle;
+}
+
+
+  /* 48em = 768px */
+  
+  @media (min-width: 48em) {
+    .header li {
+      float: left;
+    }
+    .header li a {
+      padding: 20px 30px;
+    }
+    .header .menu {
+      clear: none;
+      float: right;
+      max-height: none;
+    }
+    .header .menu-icon {
+      display: none;
+    }
+  }
+  
